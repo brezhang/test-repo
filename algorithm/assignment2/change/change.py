@@ -5,11 +5,10 @@ def get_change(m):
 	coins=[10,5,1]
 	w=m
 	count=0
-	while w!=0:
-		for i in coins:
-			if w>=i:
-				w=w-i
-				count=count+1
+	for i in coins:
+		if w>=i:
+			count=count+w/i
+			w = w % i
 
 	return count
 
